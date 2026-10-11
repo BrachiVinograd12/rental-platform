@@ -1,0 +1,58 @@
+---
+description: Persistent architecture and workflow rules for the multi-business rental platform
+alwaysApply: true
+---
+
+# Rental platform project rules
+
+This is a multi-business rental platform. Follow existing structure. Do not rewrite or delete existing code unless necessary. Inspect the project and relevant files before changing anything. Do not create duplicate files, folders, routes, models, services, or components. Keep the architecture clean, modular, and scalable. Use clear, descriptive names.
+
+## Architecture
+
+- Keep business logic out of route files.
+- Routes: HTTP wiring only.
+- Controllers: request/response handling.
+- Services: business logic.
+- Models: database entities and data access.
+- Keep database configuration separate from application logic.
+- Backend stack: Node.js, Express, REST API, MongoDB.
+- Keep routes, controllers, services, models, middleware, and configuration separated.
+
+## Database and secrets
+
+- MongoDB is the main database. Store the connection string in an environment variable.
+- Never hardcode passwords, API keys, tokens, or database credentials.
+- Never commit `.env` files or secrets to Git.
+- Use clear models/schemas. Keep database-related code organized and reusable.
+
+## API
+
+- Validate incoming API data.
+- Handle errors consistently.
+- Use appropriate HTTP status codes.
+
+## Frontend
+
+- Keep UI components reusable.
+- Separate API communication from UI components.
+- Do not put large amounts of business logic inside components.
+- Handle loading, success, and error states.
+
+## Dependencies and stack
+
+- Do not add unnecessary dependencies.
+- Before installing a dependency, check whether the project already has an appropriate solution.
+- Do not change the technology stack without asking first.
+
+## Workflow
+
+- If a requirement is unclear, ask before implementing it.
+- Work incrementally: implement one logical step at a time and verify it before the next.
+- After making changes, explain what was changed and why.
+- Run the relevant checks or tests after significant changes.
+
+## Git
+
+- Do not make commits automatically unless explicitly requested.
+- Keep changes focused and easy to review.
+- Do not modify unrelated files.
