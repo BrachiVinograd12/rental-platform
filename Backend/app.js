@@ -3,7 +3,7 @@ require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
 
 const express = require("express");
 const connectDB = require("./config/db");
-
+const tenantRoutes = require('./routes/tenantRoutes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -12,7 +12,7 @@ app.use(express.json());
 const propertyRoutes = require("./routes/propertyRoutes");
 
 app.use("/api/properties", propertyRoutes);
-
+app.use("/api/tenants", tenantRoutes);
 app.get("/", (req, res) => {
     res.json({
         message: "Rental Platform API is running"
