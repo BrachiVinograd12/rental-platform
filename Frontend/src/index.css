@@ -1,0 +1,34 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, sans-serif;
+  color: #1c2437;
+  background: #f6f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}

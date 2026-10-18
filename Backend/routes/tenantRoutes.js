@@ -1,13 +1,19 @@
 
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 const {
   createTenant,
   getTenants,
-} = require('../controllers/tenantController');
+  getTenantById,
+  updateTenant,
+  deleteTenant,
+} = require("../controllers/tenantController");
 
-router.post('/', createTenant);
-router.get('/', getTenants);
+router.get("/", getTenants);
+router.post("/", createTenant);
+router.get("/:id", getTenantById);
+router.patch("/:id", updateTenant);
+router.delete("/:id", deleteTenant);
 
 module.exports = router;
